@@ -1,4 +1,4 @@
-The project website can be found at the following URL: ""
+The project website can be found at the following URL: "http://jmcmanu2.github.io/cs171-fp-mcmanus-jeffery/"
 
 The screencast can be found at the following URL: "http://youtu.be/2VcTOQ_dBNQ"
 
