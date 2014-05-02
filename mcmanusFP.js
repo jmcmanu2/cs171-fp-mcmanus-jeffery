@@ -85,7 +85,7 @@ var color = d3.scale.quantize()
 	.range(color_range);
 	
 // Data binding	
-d3.csv("../data/Performance index.csv",function(error, perf_data){
+d3.csv("data/Performance index.csv",function(error, perf_data){
 
 	// Convert string values to numeric
 	perf_data.forEach(function(obj){
