@@ -21,3 +21,5 @@ This repository contains the following files:
 * process_book_final.pdf: The process book for the final project
 
 * process_book_milestone1.pdf: The process book for the final project, as it stood at Milestone 1.
+
+* index.html: Same as mcmanusFP.html, necessary renaming for Git Pages
