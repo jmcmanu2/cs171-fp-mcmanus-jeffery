@@ -210,7 +210,7 @@ d3.csv("data/Performance index.csv",function(error, perf_data){
 				
 		
 				var selectedBLOCK_data ;
-				d3.json("../data/blocks2.json", function(error,json_blocks){
+				d3.json("data/blocks2.json", function(error,json_blocks){
 					json_blocks.features.forEach(function(block){
 						if (block['properties']['tahsil'] == selectedGP_data['properties']['tahsil']){
 							selectedBLOCK_data = block;
@@ -283,7 +283,7 @@ var zoom_level = 0;
 		
 // District-level map
 function mainMap(perf_data){
-d3.json("../data/states2.json", function(error,json_states){
+d3.json("data/states2.json", function(error,json_states){
 
 	// Create state boundaries for context
 	mapVis.selectAll(".state_context")
@@ -323,7 +323,7 @@ d3.json("../data/states2.json", function(error,json_states){
 		;
 
 			
-	d3.json("../data/districts2.json", function(error,json_districts){
+	d3.json("data/districts2.json", function(error,json_districts){
 			
 		// Map title
 		mapTitles.selectAll(".map_title").remove();
@@ -338,7 +338,7 @@ d3.json("../data/states2.json", function(error,json_states){
 			;
 	
 		// Create village polygons
-		d3.json("../data/gps2.json", function(error,json_gps){
+		d3.json("data/gps2.json", function(error,json_gps){
 
 			// Filter villages in selected district
 			var all_gps = [];
@@ -449,7 +449,7 @@ d3.json("../data/states2.json", function(error,json_states){
 // Block-level map
 function blockMap(DISTRICT, perf_data){
 // Create state boundaries for context
-d3.json("../data/states2.json", function(error,json_states){
+d3.json("data/states2.json", function(error,json_states){
 
 	mapVis.selectAll(".state_context")
 		.data(json_states.features)
@@ -460,7 +460,7 @@ d3.json("../data/states2.json", function(error,json_states){
 		;
 
 	// Create district boundaries for context
-	d3.json("../data/districts2.json", function(error,json_districts){
+	d3.json("data/districts2.json", function(error,json_districts){
 
 		mapVis.selectAll(".district_context")
 			.data(json_districts.features)
@@ -469,7 +469,7 @@ d3.json("../data/states2.json", function(error,json_states){
 			.attr("d", path)
 			.attr("class", "district_context")
 
-		d3.json("../data/blocks2.json", function(error,json_blocks){
+		d3.json("data/blocks2.json", function(error,json_blocks){
 
 			// Change map title
 			mapTitles.selectAll(".map_title").remove();
@@ -482,7 +482,7 @@ d3.json("../data/states2.json", function(error,json_states){
 				;
 		
 			// Create village polygons
-			d3.json("../data/gps2.json", function(error,json_gps){
+			d3.json("data/gps2.json", function(error,json_gps){
 					
 				// Filter villages in selected district
 				var district_gps = [];
@@ -598,7 +598,7 @@ d3.json("../data/states2.json", function(error,json_states){
 function gpMap(BLOCK, perf_data){
 
 // Create state boundaries for context
-d3.json("../data/states2.json", function(error,json_states){
+d3.json("data/states2.json", function(error,json_states){
 
 	mapVis.selectAll(".state_context")
 		.data(json_states.features)
@@ -609,7 +609,7 @@ d3.json("../data/states2.json", function(error,json_states){
 		;
 
 	// Create district boundaries for context
-	d3.json("../data/districts2.json", function(error,json_districts){
+	d3.json("data/districts2.json", function(error,json_districts){
 
 		mapVis.selectAll(".district_context")
 			.data(json_districts.features)
@@ -618,7 +618,7 @@ d3.json("../data/states2.json", function(error,json_states){
 			.attr("d", path)
 			.attr("class", "district_context")
 		
-		d3.json("../data/gps2.json", function(error,json_gps){
+		d3.json("data/gps2.json", function(error,json_gps){
 			
 			// Change map title
 			mapTitles.selectAll(".map_title").remove();
